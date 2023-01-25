@@ -15,7 +15,7 @@ class BANK {
         }
         else{
             this.balance -= amount;
-            LOGGER.log(Level.INFO,"Current balance: "+balance);
+            LOGGER.log(Level.INFO,balance.toString(),"Current balance: "+balance);
         }
     } 
     void withdraw(){
