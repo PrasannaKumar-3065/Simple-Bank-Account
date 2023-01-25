@@ -38,7 +38,7 @@ public class App
     {
         Scanner sc = new Scanner(System.in);
         LOGGER.log(Level.INFO,"My bank \n");
-        System.out.print("name :");
+        LOGGER.log(Level.INFO,"name :");
         String name = sc.next();
         System.out.print("account number :");
         int accno  = sc.nextInt();
