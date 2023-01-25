@@ -64,11 +64,8 @@ public class App
             else if(s == 3){
                 System.out.println(b.balance);
             }
-            else if(s == 4){
-                System.exit(1);
-            }
             else{
-                continue;
+                System.exit(1);
             }
         }while(start== 1);
     }
