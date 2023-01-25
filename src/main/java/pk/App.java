@@ -5,7 +5,7 @@ class BANK {
     String name;
     int accno;
     int balance;
-    final private static Logger LOGGER =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    private static final Logger LOGGER =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     void withdraw(int amount){
         if(balance < amount){
             System.out.println("Current balance is "+balance+". amount "+amount+" cannot be withdrawn.");
@@ -34,7 +34,7 @@ class BANK {
 
 public class App 
 {
-    final private static Logger LOGGER =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    private static final Logger LOGGER =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     public static void main( String[] args )
     {
         Scanner sc = new Scanner(System.in);
