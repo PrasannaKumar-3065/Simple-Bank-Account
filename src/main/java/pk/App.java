@@ -40,12 +40,12 @@ public class App
         LOGGER.log(Level.INFO,"My bank \n");
         LOGGER.log(Level.INFO,"name :");
         String name = sc.next();
-        System.out.print("account number :");
+        LOGGER.log(Level.INFO,"account number :");
         int accno  = sc.nextInt();
         bank b = new bank(name,accno,500);
         int start = 1;
         do{
-            System.out.println("1.deposit 2.withdraw 3.check balance 4.exit");
+            LOGGER.log(Level.INFO,"1.deposit 2.withdraw 3.check balance 4.exit");
             int s = sc.nextInt();
             if(s == 1){
                 System.out.println("Enter amount: ");
