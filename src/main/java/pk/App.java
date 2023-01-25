@@ -60,7 +60,8 @@ public class App
                 
             }
             else if(s == 3){
-                LOGGER.log(Level.INFO,""+b.balance);
+                String m = ""+b.balance;
+                LOGGER.log(Level.INFO,m);
             }
             else if(s == 4){
                 System.exit(1);
