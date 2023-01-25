@@ -72,5 +72,6 @@ class New{
 
         // while(d.validatecred(name) != 0){
         //     name = sc.next();
+        // System.out.print(name);
     }
 }
