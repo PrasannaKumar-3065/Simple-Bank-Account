@@ -1,5 +1,6 @@
 package pk;
 import java.util.*;
+
 /**
  * Hello world!
  *
@@ -13,7 +14,7 @@ class BANK {
             System.out.println("Current balance is "+balance+". amount "+amount+" cannot be withdrawn.");
         }
         else if(balance-amount < 500){
-            System.out.println("Minimum balance must be atleast 500");
+            System.out.print("Minimum balance must be atleast 500");
         }
         else{
             this.balance -= amount;
