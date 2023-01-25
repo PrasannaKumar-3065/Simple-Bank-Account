@@ -1,4 +1,3 @@
-package pk;
 import java.util.*;
 import java.util.logging.*;
 class BANK {
@@ -15,7 +14,7 @@ class BANK {
         }
         else{
             this.balance -= amount;
-            LOGGER.log(Level.INFO,balance.toString(),"Current balance: "+balance);
+            LOGGER.log(Level.INFO,Double.toString(balance),"Current balance: "+balance);
         }
     } 
     void withdraw(){
@@ -60,7 +59,7 @@ public class App
                 
             }
             else if(s == 3){
-                LOGGER.log(Level.INFO,b.balance.toString(),b.balance);
+                LOGGER.log(Level.INFO,Double.toString(b.balance),b.balance);
             }
             else if(s == 4){
                 start = 0;
