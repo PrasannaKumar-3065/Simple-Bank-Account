@@ -4,7 +4,7 @@ import java.util.*;
  * Hello world!
  *
  */
-class bank {
+class BANK {
     String name;
     int accno;
     int balance;
@@ -27,7 +27,7 @@ class bank {
         this.balance += amount;
         System.out.println("Current balance: "+balance);
     }
-    bank(String name, int accno, int balance){
+    BANK(String name, int accno, int balance){
         this.name = name;
         this.accno = accno;
         this.balance = balance;
@@ -44,7 +44,7 @@ public class App
         String name = sc.next();
         System.out.print("account number :");
         int accno  = sc.nextInt();
-        bank b = new bank(name,accno,500);
+        BANK b = new BANK(name,accno,500);
         int start = 1;
         do{
             System.out.println("1.deposit 2.withdraw 3.check balance 4.exit");
