@@ -8,7 +8,7 @@ class BANK {
     private static final Logger LOGGER =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     void withdraw(int amount){
         if(balance < amount){
-            System.out.println("Current balance is "+balance+". amount "+amount+" cannot be withdrawn.");
+            LOGGER.log(Level.INFO,"Current balance is "+balance+". amount "+amount+" cannot be withdrawn.");
         }
         else if(balance-amount < 500){
             LOGGER.log(Level.INFO,"Minimum balance must be atleast 500");
