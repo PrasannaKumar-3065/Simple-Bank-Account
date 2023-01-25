@@ -1,20 +1,16 @@
 package pk;
 import java.util.*;
-
-/**
- * Hello world!
- *
- */
-class BANK {
+import java.util.logging.*;
+class bank {
     String name;
-    int accno;
+    int acc_no;
     int balance;
     void withdraw(int amount){
         if(balance < amount){
             System.out.println("Current balance is "+balance+". amount "+amount+" cannot be withdrawn.");
         }
         else if(balance-amount < 500){
-            System.out.print("Minimum balance must be atleast 500");
+            System.out.println("Minimum balance must be atleast 500");
         }
         else{
             this.balance -= amount;
@@ -28,24 +24,25 @@ class BANK {
         this.balance += amount;
         System.out.println("Current balance: "+balance);
     }
-    BANK(String name, int accno, int balance){
+    bank(String name, int acc_no, int balance){
         this.name = name;
-        this.accno = accno;
+        this.acc_no = acc_no;
         this.balance = balance;
     }
 }
 
 public class App 
 {
+    private final static Logger LOGGER =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     public static void main( String[] args )
     {
         Scanner sc = new Scanner(System.in);
-        System.out.print("My bank \n");
+        LOGGER.log(Level.INFO,"My bank \n");
         System.out.print("name :");
         String name = sc.next();
         System.out.print("account number :");
-        int accno  = sc.nextInt();
-        BANK b = new BANK(name,accno,500);
+        int acc_no  = sc.nextInt();
+        bank b = new bank(name,acc_no,500);
         int start = 1;
         do{
             System.out.println("1.deposit 2.withdraw 3.check balance 4.exit");
@@ -64,8 +61,11 @@ public class App
             else if(s == 3){
                 System.out.println(b.balance);
             }
-            else{
+            else if(s == 4){
                 System.exit(1);
+            }
+            else{
+                continue;
             }
         }while(start== 1);
     }
