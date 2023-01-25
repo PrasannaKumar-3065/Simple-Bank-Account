@@ -6,7 +6,7 @@ import java.util.*;
  */
 class bank {
     String name;
-    int acc_no;
+    int accno;
     int balance;
     void withdraw(int amount){
         if(balance < amount){
@@ -27,9 +27,9 @@ class bank {
         this.balance += amount;
         System.out.println("Current balance: "+balance);
     }
-    bank(String name, int acc_no, int balance){
+    bank(String name, int accno, int balance){
         this.name = name;
-        this.acc_no = acc_no;
+        this.accno = accno;
         this.balance = balance;
     }
 }
@@ -43,8 +43,8 @@ public class App
         System.out.print("name :");
         String name = sc.next();
         System.out.print("account number :");
-        int acc_no  = sc.nextInt();
-        bank b = new bank(name,acc_no,500);
+        int accno  = sc.nextInt();
+        bank b = new bank(name,accno,500);
         int start = 1;
         do{
             System.out.println("1.deposit 2.withdraw 3.check balance 4.exit");
