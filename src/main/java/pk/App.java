@@ -5,6 +5,7 @@ class BANK {
     String name;
     int accno;
     int balance;
+    private final static Logger LOGGER =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     void withdraw(int amount){
         if(balance < amount){
             System.out.println("Current balance is "+balance+". amount "+amount+" cannot be withdrawn.");
@@ -24,7 +25,7 @@ class BANK {
         this.balance += amount;
         LOGGER.log(Level.INFO,"Current balance: "+balance);
     }
-    bank(String name, int accno, int balance){
+    BANK(String name, int accno, int balance){
         this.name = name;
         this.accno = accno;
         this.balance = balance;
@@ -42,13 +43,13 @@ public class App
         String name = sc.next();
         LOGGER.log(Level.INFO,"account number :");
         int accno  = sc.nextInt();
-        bank b = new bank(name,accno,500);
+        BANK b = new BANK(name,accno,500);
         int start = 1;
         do{
             LOGGER.log(Level.INFO,"1.deposit 2.withdraw 3.check balance 4.exit");
             int s = sc.nextInt();
             if(s == 1){
-                LEVEL.log(Level.INFO,"Enter amount: ");
+                LOGGER.log(Level.INFO,"Enter amount: ");
                 int amount = sc.nextInt();
                 b.deposit(amount);
             }
@@ -59,7 +60,7 @@ public class App
                 
             }
             else if(s == 3){
-                LOGGER.log(Level.INFO,b.balance);
+                LOGGER.log(Level.INFO,""+b.balance);
             }
             else if(s == 4){
                 System.exit(1);
