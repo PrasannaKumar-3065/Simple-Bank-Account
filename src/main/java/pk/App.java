@@ -22,7 +22,7 @@ class BANK {
     }    
     void deposit(int amount){
         this.balance += amount;
-        LOGGER.log(Level.INFO,"Current balance: "+balance);
+        LOGGER.log(Level.INFO,Double.toString(balance),"Current balance: "+balance);
     }
     BANK(String name, int accno, int balance){
         this.name = name;
