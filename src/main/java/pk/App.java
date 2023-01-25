@@ -10,11 +10,11 @@ class BANK {
             System.out.println("Current balance is "+balance+". amount "+amount+" cannot be withdrawn.");
         }
         else if(balance-amount < 500){
-            System.out.println("Minimum balance must be atleast 500");
+            LOGGER.log(Level.INFO,"Minimum balance must be atleast 500");
         }
         else{
             this.balance -= amount;
-            System.out.println("Current balance: "+balance);
+            LOGGER.log(Level.INFO,"Current balance: "+balance);
         }
     } 
     void withdraw(){
@@ -22,7 +22,7 @@ class BANK {
     }    
     void deposit(int amount){
         this.balance += amount;
-        System.out.println("Current balance: "+balance);
+        LOGGER.log(Level.INFO,"Current balance: "+balance);
     }
     bank(String name, int accno, int balance){
         this.name = name;
@@ -48,18 +48,18 @@ public class App
             LOGGER.log(Level.INFO,"1.deposit 2.withdraw 3.check balance 4.exit");
             int s = sc.nextInt();
             if(s == 1){
-                System.out.println("Enter amount: ");
+                LEVEL.log(Level.INFO,"Enter amount: ");
                 int amount = sc.nextInt();
                 b.deposit(amount);
             }
             else if(s == 2){
-                System.out.println("Enter amount: ");
+                LOGGER.log(Level.INFO,"Enter amount: ");
                 int amount = sc.nextInt();
                 b.withdraw(amount);
                 
             }
             else if(s == 3){
-                System.out.println(b.balance);
+                LOGGER.log(Level.INFO,b.balance);
             }
             else if(s == 4){
                 System.exit(1);
