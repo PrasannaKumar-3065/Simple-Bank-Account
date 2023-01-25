@@ -64,7 +64,7 @@ public class App
                 LOGGER.log(Level.INFO,m);
             }
             else if(s == 4){
-                System.exit(1);
+                start = 0;
             }
         }while(start== 1);
     }
