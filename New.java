@@ -72,8 +72,5 @@ class New{
 
         // while(d.validatecred(name) != 0){
         //     name = sc.next();
-        // }
-        // d.newcred("prasanna", "1", "500");
-        // d.show();
     }
 }
