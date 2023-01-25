@@ -1,7 +1,7 @@
 package pk;
 import java.util.*;
 import java.util.logging.*;
-class bank {
+class BANK {
     String name;
     int accno;
     int balance;
@@ -63,9 +63,6 @@ public class App
             }
             else if(s == 4){
                 System.exit(1);
-            }
-            else{
-                continue;
             }
         }while(start== 1);
     }
