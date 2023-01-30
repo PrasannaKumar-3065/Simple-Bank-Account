@@ -34,7 +34,7 @@ class BANK {
 
 public class App 
 {
-    private static final Logger LOGGER =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    private static final Logger LOGGER =  Logger.getLogger("InfoLogging");
     public static void main( String[] args )
     {
         Scanner sc = new Scanner(System.in);
@@ -47,22 +47,22 @@ public class App
         int start = 1;
         do{
             try{
-                LOGGER.log(Level.INFO,"1.deposit 2.withdraw 3.check balance 4.exit");
+                LOGGER.info("1.deposit 2.withdraw 3.check balance 4.exit");
                 int s = sc.nextInt();
                 if(s == 1){
-                    LOGGER.log(Level.INFO,"Enter amount: ");
+                    LOGGER.info("Enter amount: ");
                     int amount = sc.nextInt();
                     b.deposit(amount);
                 }
                 else if(s == 2){
-                    LOGGER.log(Level.INFO,"Enter amount: ");
+                    LOGGER.info("Enter amount: ");
                     int amount = sc.nextInt();
                     b.withdraw(amount);
                     
                 }
                 else if(s == 3){
                     String m = ""+b.balance;
-                    LOGGER.log(Level.INFO,m.toString(),m);
+                    LOGGER.info(m);
                 }
                 else if(s == 4){
                     start = 0;
