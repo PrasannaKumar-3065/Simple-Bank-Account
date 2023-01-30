@@ -16,7 +16,8 @@ class BANK {
         }
         else{
             this.balance -= amount;
-            LOGGER.info("Current balance: "+balance);
+            String s = "Current balance: "+balance;
+            LOGGER.info(s);
         }
     } 
     void withdraw(){
@@ -24,7 +25,8 @@ class BANK {
     }    
     void deposit(int amount){
         this.balance += amount;
-        LOGGER.info("Current balance: "+balance);
+        String s = "Current balance: "+balance;
+        LOGGER.info(s);
     }
     BANK(String name, int accno, int balance){
         this.name = name;
