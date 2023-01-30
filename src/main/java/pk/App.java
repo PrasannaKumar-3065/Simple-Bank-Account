@@ -5,17 +5,17 @@ class BANK {
     String name;
     int accno;
     int balance;
-    private static final Logger LOGGER =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    private static final Logger LOGGER =  Logger.getLogger("InfoLogging");
     void withdraw(int amount){
         if(balance < amount){
-            LOGGER.log(Level.INFO,"Current balance is "+balance+". amount "+amount+" cannot be withdrawn.");
+            LOGGER.info("Current balance is "+balance+". amount "+amount+" cannot be withdrawn.");
         }
         else if(balance-amount < 500){
-            LOGGER.log(Level.INFO,"Minimum balance must be atleast 500");
+            LOGGER.info("Minimum balance must be atleast 500");
         }
         else{
             this.balance -= amount;
-            LOGGER.log(Level.INFO,"Current balance: "+balance);
+            LOGGER.info("Current balance: "+balance);
         }
     } 
     void withdraw(){
@@ -23,7 +23,7 @@ class BANK {
     }    
     void deposit(int amount){
         this.balance += amount;
-        LOGGER.log(Level.INFO,"Current balance: "+balance);
+        LOGGER.info("Current balance: "+balance);
     }
     BANK(String name, int accno, int balance){
         this.name = name;
