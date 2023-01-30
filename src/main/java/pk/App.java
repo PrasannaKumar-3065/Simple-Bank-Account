@@ -8,7 +8,8 @@ class BANK {
     private static final Logger LOGGER =  Logger.getLogger("InfoLogging");
     void withdraw(int amount){
         if(balance < amount){
-            LOGGER.info("Current balance is "+balance+". amount "+amount+" cannot be withdrawn.");
+            String s = "Current balance is "+balance+". amount "+amount+" cannot be withdrawn.";
+            LOGGER.info(s);
         }
         else if(balance-amount < 500){
             LOGGER.info("Minimum balance must be atleast 500");
