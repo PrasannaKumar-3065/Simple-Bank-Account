@@ -49,7 +49,6 @@ public class App
         BANK b = new BANK(name,accno,500);
         int start = 1;
         do{
-            try{
                 LOGGER.info("1.deposit 2.withdraw 3.check balance 4.exit");
                 int s = sc.nextInt();
                 if(s == 1){
@@ -70,12 +69,6 @@ public class App
                 else if(s == 4){
                     start = 0;
                 }
-            }catch(Exception e){
-                String s = ""+e;
-                LOGGER.info(s);
-                sc.nextLine();
-                LOGGER.info("_______________________________________________");
-            }
         }while(start== 1);
     }
 }
